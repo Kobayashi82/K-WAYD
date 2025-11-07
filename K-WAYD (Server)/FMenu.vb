@@ -1493,7 +1493,7 @@ End Class
 Public Class YouTube
 
 
-    Private APIKey As String = "AIzaSyAdTL7Yi1N_fYEOTvm1swQLVkJkN6K_Qb0"
+    Private APIKey As String = ""
 
     Public Function Search(ResultList As String) As JsVideo
         Try : Dim Results As JsVideo = New Web.Script.Serialization.JavaScriptSerializer().Deserialize(Of JsVideo)(New Net.WebClient() With {.Encoding = Text.Encoding.UTF8}.DownloadString("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + Net.WebUtility.UrlEncode(ResultList) + "&fields=items(id%2FvideoId%2Csnippet(channelId%2CchannelTitle%2Cdescription%2Cthumbnails%2Fdefault%2Furl%2Ctitle))%2CnextPageToken%2CpageInfo%2CprevPageToken&key=" + APIKey))
