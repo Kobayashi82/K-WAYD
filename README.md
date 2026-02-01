@@ -11,6 +11,10 @@
 
 </div>
 
+<div align="center">
+  <img src="/K-WAYD%20(Arduino)/K-WAYD.jpg">
+</div>
+
 # K-WAYD
 
 ## 🎯 Descripción
