@@ -54,7 +54,7 @@ Aplicación cliente que se ejecuta en las computadoras monitoreadas.
 - Ejecución silenciosa en segundo plano (system tray)
 - Mínimo uso de recursos
 
-## ✨ Características Principales
+## ✨ Características
 
 ### Monitoreo en Tiempo Real
 - `Detección de actividad`: Captura el nombre del proceso y título de la ventana activa

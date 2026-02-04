@@ -53,7 +53,7 @@ Client application that runs on monitored computers.
 - Silent background execution (system tray)
 - Minimal resource usage
 
-## ✨ Key Features
+## ✨ Features
 
 ### Real-Time Monitoring
 - `Activity detection`: Captures process name and active window title
