@@ -1,4 +1,3 @@
-
 <div align="center">
 
 ![Desktop](https://img.shields.io/badge/Desktop-brown?style=for-the-badge)
@@ -7,7 +6,7 @@
 ![Network](https://img.shields.io/badge/Network-TCP/IP-green?style=for-the-badge)
 ![VB.NET](https://img.shields.io/badge/Language-VB.NET-red?style=for-the-badge)
 
-*Sistema de monitoreo y visualización de actividad en tiempo real*
+*Real-time activity monitoring and visualization system*
 
 </div>
 
@@ -17,95 +16,97 @@
 
 # K-WAYD
 
-## 🎯 Descripción
-K-WAYD (What Are You Doing) es un sistema integrado de monitoreo de actividad que combina hardware (Arduino con pantalla LCD) y software (aplicaciones cliente-servidor) para visualizar y registrar en tiempo real lo que está sucediendo en una computadora remota.
+[README en Español](README_es.md)
 
-El sistema captura información sobre la ventana activa, el proceso en ejecución y permite el control remoto de funciones básicas, mostrando esta información tanto en una interfaz gráfica como en una pantalla LCD conectada a un Arduino.
+## 🎯 Description
+K-WAYD (What Are You Doing) is an integrated activity monitoring system that combines hardware (Arduino with LCD display) and software (client-server apps) to visualize and log in real time what is happening on a remote computer.
 
-## 🏗️ Arquitectura del Sistema
+The system captures information about the active window and running process, and allows basic remote control functions, showing this information both in a GUI and on an Arduino-connected LCD screen.
 
-K-WAYD está compuesto por tres componentes principales:
+## 🏗️ System Architecture
 
-### 1. **K-WAYD (Arduino)** 
-Hardware basado en Arduino que controla una pantalla LCD 16x2 y un botón de navegación.
-- Recibe datos vía puerto serial (9600 baudios)
-- Muestra información en dos líneas de 16 caracteres
-- Botón físico para interacción ("Next")
-- Comunicación bidireccional con el servidor
+K-WAYD is composed of three main components:
+
+### 1. **K-WAYD (Arduino)**
+Arduino-based hardware that controls a 16x2 LCD display and a navigation button.
+- Receives data via serial port (9600 baud)
+- Displays information in two 16-character lines
+- Physical button for interaction ("Next")
+- Bidirectional communication with the server
 
 ### 2. **K-WAYD (Server)**
-Aplicación servidor desarrollada en Visual Basic .NET que gestiona las conexiones y coordina el sistema.
-- Gestiona múltiples clientes simultáneos
-- Interfaz de comunicación con Arduino vía puerto serial
-- Registro de actividad (logging)
-- Captura de pantalla remota
-- Envío de mensajes y notificaciones
-- Reproducción de sonidos remotos
-- Panel de control con interfaz gráfica
+Server application developed in Visual Basic .NET that manages connections and coordinates the system.
+- Manages multiple clients simultaneously
+- Communication interface with Arduino via serial port
+- Activity logging
+- Remote screenshot capture
+- Message and notification sending
+- Remote sound playback
+- Control panel with GUI
 
 ### 3. **K-WAYD (Client)**
-Aplicación cliente que se ejecuta en las computadoras monitoreadas.
-- Captura automática de ventana activa y proceso en ejecución
-- Envío de información al servidor vía TCP/IP
-- Captura de pantalla bajo demanda o automática
-- Ejecución silenciosa en segundo plano (system tray)
-- Mínimo uso de recursos
+Client application that runs on monitored computers.
+- Automatically captures active window and running process
+- Sends info to the server via TCP/IP
+- On-demand or automatic screenshot capture
+- Silent background execution (system tray)
+- Minimal resource usage
 
-## ✨ Características Principales
+## ✨ Key Features
 
-### Monitoreo en Tiempo Real
-- **Detección de actividad**: Captura el nombre del proceso y título de la ventana activa
-- **Actualización automática**: Envío continuo de información al servidor
-- **Múltiples clientes**: Soporte para monitorear varias computadoras simultáneamente
+### Real-Time Monitoring
+- **Activity detection**: Captures process name and active window title
+- **Automatic updates**: Continuous information sent to the server
+- **Multiple clients**: Supports monitoring several computers simultaneously
 
-### Captura de Pantalla
-- **Bajo demanda**: Captura manual desde el servidor
-- **Modo automático**: Capturas periódicas configurables
-- **Guardado automático**: Opción para almacenar capturas en disco
-- **Visualización en tiempo real**: Preview en la interfaz del servidor
+### Screenshot Capture
+- **On demand**: Manual capture from the server
+- **Automatic mode**: Configurable periodic captures
+- **Auto save**: Option to store captures on disk
+- **Real-time preview**: Preview in the server UI
 
-### Control Remoto
-- **Mensajes emergentes**: Envío de notificaciones al cliente
-- **Reproducción de sonidos**: Alerta sonora remota
-- **Buzz**: Notificación rápida de atención
-- **Cierre remoto**: Desconexión controlada del cliente
+### Remote Control
+- **Pop-up messages**: Send notifications to the client
+- **Sound playback**: Remote sound alert
+- **Buzz**: Quick attention notification
+- **Remote close**: Controlled client disconnect
 
-### Integración con Arduino
-- **Visualización LCD**: Muestra información en pantalla física
-- **Navegación**: Botón para alternar entre diferentes clientes
-- **Puerto serial**: Comunicación RS-232 a 9600 baudios
-- **Actualización en tiempo real**: Sincronización automática
+### Arduino Integration
+- **LCD display**: Shows info on a physical screen
+- **Navigation**: Button to cycle between different clients
+- **Serial port**: RS-232 communication at 9600 baud
+- **Real-time updates**: Automatic synchronization
 
-### Características de Red
-- **Protocolo TCP/IP**: Comunicación confiable cliente-servidor
-- **Puerto configurable**: Por defecto 26010
-- **Reconexión automática**: El cliente intenta reconectarse si pierde conexión
-- **Detección de conectividad**: Verificación de red antes de intentar conexión
+### Network Features
+- **TCP/IP protocol**: Reliable client-server communication
+- **Configurable port**: Default 26010
+- **Auto-reconnect**: Client attempts reconnection on loss
+- **Connectivity check**: Network verification before connecting
 
-## 🔧 Requisitos
+## 🔧 Requirements
 
 ### Hardware
-- **Arduino UNO** (o compatible)
-- **Pantalla LCD 16x2** con interfaz paralela
-- **Pulsador** (switch)
-- **Resistencias y cables** para conexiones
+- **Arduino UNO** (or compatible)
+- **16x2 LCD display** with parallel interface
+- **Push button** (switch)
+- **Resistors and wires** for connections
 
 ### Software
-- **Arduino IDE** 1.x o superior (para programar el Arduino)
-- **Windows** (para las aplicaciones servidor y cliente)
-- **.NET Framework** (incluido en Windows)
-- **Visual Studio** (opcional, solo para desarrollo)
+- **Arduino IDE** 1.x or later (to program the Arduino)
+- **Windows** (for server and client apps)
+- **.NET Framework** (included with Windows)
+- **Visual Studio** (optional, for development)
 
-### Conectividad
-- **Red local** (LAN) o conexión directa
-- **Puerto serial** disponible para Arduino
-- **Permisos de firewall** para comunicación TCP/IP
+### Connectivity
+- **Local network** (LAN) or direct connection
+- **Serial port** available for Arduino
+- **Firewall permissions** for TCP/IP communication
 
-## 📋 Instalación
+## 📋 Installation
 
-### 1. Configuración del Arduino
+### 1. Arduino setup
 
-#### Conexiones del LCD
+#### LCD wiring
 ```
 Arduino Pin -> LCD Pin
 12 -> RS
@@ -114,105 +115,105 @@ Arduino Pin -> LCD Pin
 4  -> D5
 3  -> D6
 2  -> D7
-10 -> Backlight (con resistencia)
+10 -> Backlight (with resistor)
 GND -> GND, VSS, RW, K
 5V -> VDD, A
 ```
 
-#### Conexión del Botón
+#### Button wiring
 ```
-Pin 7 -> Switch -> GND (con pull-up interno)
-```
-
-#### Carga del Programa
-1. Abre `K-WAYD (Arduino)/KWAYD.ino` en Arduino IDE
-2. Verifica que la librería LiquidCrystal esté instalada (incluida en el proyecto)
-3. Selecciona tu placa Arduino y puerto COM
-4. Carga el sketch
-
-### 2. Configuración del Servidor
-
-1. Compila el proyecto `K-WAYD (Server).sln` en Visual Studio o ejecuta el binario
-2. Ejecuta la aplicación
-3. En **Settings**:
-   - Configura el **puerto de red** (por defecto: 26010)
-   - Selecciona el **puerto COM** del Arduino
-   - Activa la opción **"Usar Arduino"** si tienes el hardware conectado
-   - Configura el inicio automático con Windows (opcional)
-4. Presiona **"Iniciar Servidor"**
-
-### 3. Configuración del Cliente
-
-1. Compila el proyecto `K-WAYD (Client).sln` o ejecuta el binario
-2. Ejecuta la aplicación en la computadora a monitorear
-3. En **Settings**:
-   - Ingresa la **dirección IP del servidor**
-   - Verifica el **puerto** (debe coincidir con el servidor)
-   - Configura la **captura automática** (opcional)
-   - Ajusta el **intervalo de captura** si es necesario
-   - Activa el inicio automático con Windows (opcional)
-4. La aplicación se minimizará a la bandeja del sistema
-
-## 🎮 Uso
-
-### Interfaz del Servidor
-
-#### Panel Principal
-- **Lista de clientes**: Muestra todos los equipos conectados
-- **Información de actividad**: Proceso y ventana activa de cada cliente
-- **Vista previa**: Muestra la última captura de pantalla del cliente seleccionado
-- **Registro de actividad**: Log cronológico de eventos
-
-#### Barra de Herramientas
-- **Switch**: Alterna entre modos de visualización en el servidor
-- **Capturar Pantalla**: Solicita captura del cliente seleccionado
-- **Enviar Mensaje**: Muestra un mensaje emergente en el cliente
-- **Play Sound**: Reproduce un sonido en el equipo remoto
-- **Buzz**: Envía notificación rápida
-- **Settings**: Configuración del servidor
-
-#### Menú Contextual
-- **Guardar Log**: Exporta el registro de actividad
-- **Vaciar Log**: Limpia el historial
-- **Captura Automática**: Activa/desactiva capturas periódicas
-- **Cerrar Cliente**: Desconecta un cliente específico
-
-### Display LCD (Arduino)
-
-La pantalla muestra información en dos líneas:
-```
-Línea 1: Nombre del equipo o proceso
-Línea 2: Título de ventana o estado
+Pin 7 -> Switch -> GND (with internal pull-up)
 ```
 
-Presiona el botón físico para navegar entre diferentes clientes conectados.
+#### Program upload
+1. Open `K-WAYD (Arduino)/KWAYD.ino` in Arduino IDE
+2. Verify the LiquidCrystal library is installed (included in the project)
+3. Select your Arduino board and COM port
+4. Upload the sketch
 
-### Aplicación Cliente
+### 2. Server setup
 
-La aplicación cliente funciona en segundo plano:
-- **Ícono en bandeja**: Solo visible si la ventana activa contiene la palabra K-WAYD en su titulo
-- **Click derecho**: Acceso a configuración
-- **Reconexión automática**: Intenta reconectarse si pierde conexión
-- **Captura adaptativa**: Solo envía cambios de actividad
+1. Build the `K-WAYD (Server).sln` project in Visual Studio or run the binary
+2. Run the app
+3. In **Settings**:
+   - Set the **network port** (default: 26010)
+   - Select the **COM port** for the Arduino
+   - Enable **"Use Arduino"** if hardware is connected
+   - Configure Windows autostart (optional)
+4. Click **"Start Server"**
 
-## 🔒 Consideraciones de Seguridad
+### 3. Client setup
 
-- **Red local**: Se recomienda usar solo en redes privadas y confiables
-- **Sin cifrado**: La comunicación no está cifrada
-- **Privacidad**: El sistema registra toda la actividad del usuario
+1. Build the `K-WAYD (Client).sln` project or run the binary
+2. Run the app on the monitored computer
+3. In **Settings**:
+   - Enter the **server IP address**
+   - Verify the **port** (must match the server)
+   - Configure **automatic capture** (optional)
+   - Adjust **capture interval** if needed
+   - Enable Windows autostart (optional)
+4. The app will minimize to the system tray
+
+## 🎮 Usage
+
+### Server Interface
+
+#### Main Panel
+- **Client list**: Shows all connected machines
+- **Activity info**: Process and active window for each client
+- **Preview**: Shows the latest screenshot from the selected client
+- **Activity log**: Chronological log of events
+
+#### Toolbar
+- **Switch**: Toggle server view modes
+- **Capture Screen**: Request capture from the selected client
+- **Send Message**: Displays a pop-up on the client
+- **Play Sound**: Plays a sound on the remote machine
+- **Buzz**: Sends a quick notification
+- **Settings**: Server configuration
+
+#### Context Menu
+- **Save Log**: Export the activity log
+- **Clear Log**: Clear the history
+- **Automatic Capture**: Enable/disable periodic captures
+- **Close Client**: Disconnect a specific client
+
+### LCD Display (Arduino)
+
+The screen shows info in two lines:
+```
+Line 1: Computer name or process
+Line 2: Window title or status
+```
+
+Press the physical button to navigate between connected clients.
+
+### Client Application
+
+The client app runs in the background:
+- **Tray icon**: Only visible if the active window contains the word K-WAYD in its title
+- **Right click**: Access settings
+- **Auto-reconnect**: Attempts to reconnect if connection is lost
+- **Adaptive capture**: Only sends activity changes
+
+## 🔒 Security Considerations
+
+- **Local network**: Recommended for private, trusted networks only
+- **No encryption**: Communication is not encrypted
+- **Privacy**: The system logs all user activity
 
 ---
-**Nota**: Este software está diseñado para uso personal y educativo. Úsalo de manera responsable y respetando la privacidad de los usuarios.
+**Note**: This software is designed for personal and educational use. Use it responsibly and respect user privacy.
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está licenciado bajo la WTFPL – [Do What the Fuck You Want to Public License](http://www.wtfpl.net/about/).
+This project is licensed under the WTFPL – [Do What the Fuck You Want to Public License](http://www.wtfpl.net/about/).
 
 ---
 
 <div align="center">
 
-**🖧 Desarrollado por Kobayashi82 🖧**
+**🖧 Developed by Kobayashi82 🖧**
 
 *"Know what they're doing, anytime, anywhere"*
 
