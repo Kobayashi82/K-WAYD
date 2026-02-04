@@ -104,7 +104,7 @@ Aplicación cliente que se ejecuta en las computadoras monitoreadas.
 - `Puerto serial` disponible para Arduino
 - `Permisos de firewall` para comunicación TCP/IP
 
-## 📋 Instalación
+## 🔧 Instalación
 
 ### 1. Configuración del Arduino
 
@@ -156,7 +156,7 @@ Pin 7 -> Switch -> GND (con pull-up interno)
    - Activa el inicio automático con Windows (opcional)
 4. La aplicación se minimizará a la bandeja del sistema
 
-## 🎮 Uso
+## 🖥️ Uso
 
 ### Interfaz del Servidor
 

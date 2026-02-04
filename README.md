@@ -103,7 +103,7 @@ Client application that runs on monitored computers.
 - `Serial port` available for Arduino
 - `Firewall permissions` for TCP/IP communication
 
-## 📋 Installation
+## 🔧 Installation
 
 ### 1. Arduino setup
 
@@ -155,7 +155,7 @@ Pin 7 -> Switch -> GND (with internal pull-up)
    - Enable Windows autostart (optional)
 4. The app will minimize to the system tray
 
-## 🎮 Usage
+## 🖥️ Usage
 
 ### Server Interface
 
