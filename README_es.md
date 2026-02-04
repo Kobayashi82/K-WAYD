@@ -19,14 +19,15 @@
 
 [README in English](README.md)
 
-## 🎯 Descripción
-K-WAYD (What Are You Doing) es un sistema integrado de monitoreo de actividad que combina hardware (Arduino con pantalla LCD) y software (aplicaciones cliente-servidor) para visualizar y registrar en tiempo real lo que está sucediendo en una computadora remota.
+> Este proyecto es únicamente para fines `educativos`. El código debe usarse solo en entornos controlados, como máquinas virtuales.
+
+`K-WAYD` (What Are You Doing) es un sistema integrado de monitoreo de actividad que combina hardware (Arduino con pantalla LCD) y software (aplicaciones cliente-servidor) para visualizar y registrar en tiempo real lo que está sucediendo en una computadora remota.
 
 El sistema captura información sobre la ventana activa, el proceso en ejecución y permite el control remoto de funciones básicas, mostrando esta información tanto en una interfaz gráfica como en una pantalla LCD conectada a un Arduino.
 
 ## 🏗️ Arquitectura del Sistema
 
-K-WAYD está compuesto por tres componentes principales:
+`K-WAYD` está compuesto por tres componentes principales:
 
 ### 1. **K-WAYD (Arduino)** 
 Hardware basado en Arduino que controla una pantalla LCD 16x2 y un botón de navegación.
@@ -56,52 +57,52 @@ Aplicación cliente que se ejecuta en las computadoras monitoreadas.
 ## ✨ Características Principales
 
 ### Monitoreo en Tiempo Real
-- **Detección de actividad**: Captura el nombre del proceso y título de la ventana activa
-- **Actualización automática**: Envío continuo de información al servidor
-- **Múltiples clientes**: Soporte para monitorear varias computadoras simultáneamente
+- `Detección de actividad`: Captura el nombre del proceso y título de la ventana activa
+- `Actualización automática`: Envío continuo de información al servidor
+- `Múltiples clientes`: Soporte para monitorear varias computadoras simultáneamente
 
 ### Captura de Pantalla
-- **Bajo demanda**: Captura manual desde el servidor
-- **Modo automático**: Capturas periódicas configurables
-- **Guardado automático**: Opción para almacenar capturas en disco
-- **Visualización en tiempo real**: Preview en la interfaz del servidor
+- `Bajo demanda`: Captura manual desde el servidor
+- `Modo automático`: Capturas periódicas configurables
+- `Guardado automático`: Opción para almacenar capturas en disco
+- `Visualización en tiempo real`: Preview en la interfaz del servidor
 
 ### Control Remoto
-- **Mensajes emergentes**: Envío de notificaciones al cliente
-- **Reproducción de sonidos**: Alerta sonora remota
-- **Buzz**: Notificación rápida de atención
-- **Cierre remoto**: Desconexión controlada del cliente
+- `Mensajes emergentes`: Envío de notificaciones al cliente
+- `Reproducción de sonidos`: Alerta sonora remota
+- `Buzz`: Notificación rápida de atención
+- `Cierre remoto`: Desconexión controlada del cliente
 
 ### Integración con Arduino
-- **Visualización LCD**: Muestra información en pantalla física
-- **Navegación**: Botón para alternar entre diferentes clientes
-- **Puerto serial**: Comunicación RS-232 a 9600 baudios
-- **Actualización en tiempo real**: Sincronización automática
+- `Visualización LCD`: Muestra información en pantalla física
+- `Navegación`: Botón para alternar entre diferentes clientes
+- `Puerto serial`: Comunicación RS-232 a 9600 baudios
+- `Actualización en tiempo real`: Sincronización automática
 
 ### Características de Red
-- **Protocolo TCP/IP**: Comunicación confiable cliente-servidor
-- **Puerto configurable**: Por defecto 26010
-- **Reconexión automática**: El cliente intenta reconectarse si pierde conexión
-- **Detección de conectividad**: Verificación de red antes de intentar conexión
+- `Protocolo TCP/IP`: Comunicación confiable cliente-servidor
+- `Puerto configurable`: Por defecto 26010
+- `Reconexión automática`: El cliente intenta reconectarse si pierde conexión
+- `Detección de conectividad`: Verificación de red antes de intentar conexión
 
 ## 🔧 Requisitos
 
 ### Hardware
-- **Arduino UNO** (o compatible)
-- **Pantalla LCD 16x2** con interfaz paralela
-- **Pulsador** (switch)
-- **Resistencias y cables** para conexiones
+- `Arduino UNO` (o compatible)
+- `Pantalla LCD 16x2` con interfaz paralela
+- `Pulsador` (switch)
+- `Resistencias y cables` para conexiones
 
 ### Software
-- **Arduino IDE** 1.x o superior (para programar el Arduino)
-- **Windows** (para las aplicaciones servidor y cliente)
-- **.NET Framework** (incluido en Windows)
-- **Visual Studio** (opcional, solo para desarrollo)
+- `Arduino IDE` 1.x o superior (para programar el Arduino)
+- `Windows` (para las aplicaciones servidor y cliente)
+- `.NET Framework` (incluido en Windows)
+- `Visual Studio` (opcional, solo para desarrollo)
 
 ### Conectividad
-- **Red local** (LAN) o conexión directa
-- **Puerto serial** disponible para Arduino
-- **Permisos de firewall** para comunicación TCP/IP
+- `Red local` (LAN) o conexión directa
+- `Puerto serial` disponible para Arduino
+- `Permisos de firewall` para comunicación TCP/IP
 
 ## 📋 Instalación
 
@@ -160,24 +161,24 @@ Pin 7 -> Switch -> GND (con pull-up interno)
 ### Interfaz del Servidor
 
 #### Panel Principal
-- **Lista de clientes**: Muestra todos los equipos conectados
-- **Información de actividad**: Proceso y ventana activa de cada cliente
-- **Vista previa**: Muestra la última captura de pantalla del cliente seleccionado
-- **Registro de actividad**: Log cronológico de eventos
+- `Lista de clientes`: Muestra todos los equipos conectados
+- `Información de actividad`: Proceso y ventana activa de cada cliente
+- `Vista previa`: Muestra la última captura de pantalla del cliente seleccionado
+- `Registro de actividad`: Log cronológico de eventos
 
 #### Barra de Herramientas
-- **Switch**: Alterna entre modos de visualización en el servidor
-- **Capturar Pantalla**: Solicita captura del cliente seleccionado
-- **Enviar Mensaje**: Muestra un mensaje emergente en el cliente
-- **Play Sound**: Reproduce un sonido en el equipo remoto
-- **Buzz**: Envía notificación rápida
-- **Settings**: Configuración del servidor
+- `Switch`: Alterna entre modos de visualización en el servidor
+- `Capturar Pantalla`: Solicita captura del cliente seleccionado
+- `Enviar Mensaje`: Muestra un mensaje emergente en el cliente
+- `Play Sound`: Reproduce un sonido en el equipo remoto
+- `Buzz`: Envía notificación rápida
+- `Settings`: Configuración del servidor
 
 #### Menú Contextual
-- **Guardar Log**: Exporta el registro de actividad
-- **Vaciar Log**: Limpia el historial
-- **Captura Automática**: Activa/desactiva capturas periódicas
-- **Cerrar Cliente**: Desconecta un cliente específico
+- `Guardar Log`: Exporta el registro de actividad
+- `Vaciar Log`: Limpia el historial
+- `Captura Automática`: Activa/desactiva capturas periódicas
+- `Cerrar Cliente`: Desconecta un cliente específico
 
 ### Display LCD (Arduino)
 
@@ -192,19 +193,20 @@ Presiona el botón físico para navegar entre diferentes clientes conectados.
 ### Aplicación Cliente
 
 La aplicación cliente funciona en segundo plano:
-- **Ícono en bandeja**: Solo visible si la ventana activa contiene la palabra K-WAYD en su titulo
-- **Click derecho**: Acceso a configuración
-- **Reconexión automática**: Intenta reconectarse si pierde conexión
-- **Captura adaptativa**: Solo envía cambios de actividad
+- `Ícono en bandeja`: Solo visible si la ventana activa contiene la palabra K-WAYD en su titulo
+- `Click derecho`: Acceso a configuración
+- `Reconexión automática`: Intenta reconectarse si pierde conexión
+- `Captura adaptativa`: Solo envía cambios de actividad
 
 ## 🔒 Consideraciones de Seguridad
 
-- **Red local**: Se recomienda usar solo en redes privadas y confiables
-- **Sin cifrado**: La comunicación no está cifrada
-- **Privacidad**: El sistema registra toda la actividad del usuario
+- `Red local`: Se recomienda usar solo en redes privadas y confiables
+- `Sin cifrado`: La comunicación no está cifrada
+- `Privacidad`: El sistema registra toda la actividad del usuario
 
 ---
-**Nota**: Este software está diseñado para uso personal y educativo. Úsalo de manera responsable y respetando la privacidad de los usuarios.
+
+`Nota`: Este software está diseñado para uso personal y `educativo`. Úsalo de manera responsable y respetando la privacidad de los usuarios.
 
 ## 📄 Licencia
 

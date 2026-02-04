@@ -18,14 +18,15 @@
 
 [README en Español](README_es.md)
 
-## 🎯 Description
-K-WAYD (What Are You Doing) is an integrated activity monitoring system that combines hardware (Arduino with LCD display) and software (client-server apps) to visualize and log in real time what is happening on a remote computer.
+> This project is strictly for `educational` purposes. The code must be used only in controlled environments, such as virtual machines.
+
+`K-WAYD` (What Are You Doing) is an integrated activity monitoring system that combines hardware (Arduino with LCD display) and software (client-server apps) to visualize and log in real time what is happening on a remote computer.
 
 The system captures information about the active window and running process, and allows basic remote control functions, showing this information both in a GUI and on an Arduino-connected LCD screen.
 
 ## 🏗️ System Architecture
 
-K-WAYD is composed of three main components:
+`K-WAYD` is composed of three main components:
 
 ### 1. **K-WAYD (Arduino)**
 Arduino-based hardware that controls a 16x2 LCD display and a navigation button.
@@ -55,52 +56,52 @@ Client application that runs on monitored computers.
 ## ✨ Key Features
 
 ### Real-Time Monitoring
-- **Activity detection**: Captures process name and active window title
-- **Automatic updates**: Continuous information sent to the server
-- **Multiple clients**: Supports monitoring several computers simultaneously
+- `Activity detection`: Captures process name and active window title
+- `Automatic updates`: Continuous information sent to the server
+- `Multiple clients`: Supports monitoring several computers simultaneously
 
 ### Screenshot Capture
-- **On demand**: Manual capture from the server
-- **Automatic mode**: Configurable periodic captures
-- **Auto save**: Option to store captures on disk
-- **Real-time preview**: Preview in the server UI
+- `On demand`: Manual capture from the server
+- `Automatic mode`: Configurable periodic captures
+- `Auto save`: Option to store captures on disk
+- `Real-time preview`: Preview in the server UI
 
 ### Remote Control
-- **Pop-up messages**: Send notifications to the client
-- **Sound playback**: Remote sound alert
-- **Buzz**: Quick attention notification
-- **Remote close**: Controlled client disconnect
+- `Pop-up messages`: Send notifications to the client
+- `Sound playback`: Remote sound alert
+- `Buzz`: Quick attention notification
+- `Remote close`: Controlled client disconnect
 
 ### Arduino Integration
-- **LCD display**: Shows info on a physical screen
-- **Navigation**: Button to cycle between different clients
-- **Serial port**: RS-232 communication at 9600 baud
-- **Real-time updates**: Automatic synchronization
+- `LCD display`: Shows info on a physical screen
+- `Navigation`: Button to cycle between different clients
+- `Serial port`: RS-232 communication at 9600 baud
+- `Real-time updates`: Automatic synchronization
 
 ### Network Features
-- **TCP/IP protocol**: Reliable client-server communication
-- **Configurable port**: Default 26010
-- **Auto-reconnect**: Client attempts reconnection on loss
-- **Connectivity check**: Network verification before connecting
+- `TCP/IP protocol`: Reliable client-server communication
+- `Configurable port`: Default 26010
+- `Auto-reconnect`: Client attempts reconnection on loss
+- `Connectivity check`: Network verification before connecting
 
 ## 🔧 Requirements
 
 ### Hardware
-- **Arduino UNO** (or compatible)
-- **16x2 LCD display** with parallel interface
-- **Push button** (switch)
-- **Resistors and wires** for connections
+- `Arduino UNO` (or compatible)
+- `16x2 LCD display` with parallel interface
+- `Push button` (switch)
+- `Resistors and wires` for connections
 
 ### Software
-- **Arduino IDE** 1.x or later (to program the Arduino)
-- **Windows** (for server and client apps)
-- **.NET Framework** (included with Windows)
-- **Visual Studio** (optional, for development)
+- `Arduino IDE` 1.x or later (to program the Arduino)
+- `Windows` (for server and client apps)
+- `.NET Framework` (included with Windows)
+- `Visual Studio` (optional, for development)
 
 ### Connectivity
-- **Local network** (LAN) or direct connection
-- **Serial port** available for Arduino
-- **Firewall permissions** for TCP/IP communication
+- `Local network` (LAN) or direct connection
+- `Serial port` available for Arduino
+- `Firewall permissions` for TCP/IP communication
 
 ## 📋 Installation
 
@@ -159,24 +160,24 @@ Pin 7 -> Switch -> GND (with internal pull-up)
 ### Server Interface
 
 #### Main Panel
-- **Client list**: Shows all connected machines
-- **Activity info**: Process and active window for each client
-- **Preview**: Shows the latest screenshot from the selected client
-- **Activity log**: Chronological log of events
+- `Client list`: Shows all connected machines
+- `Activity info`: Process and active window for each client
+- `Preview`: Shows the latest screenshot from the selected client
+- `Activity log`: Chronological log of events
 
 #### Toolbar
-- **Switch**: Toggle server view modes
-- **Capture Screen**: Request capture from the selected client
-- **Send Message**: Displays a pop-up on the client
-- **Play Sound**: Plays a sound on the remote machine
-- **Buzz**: Sends a quick notification
-- **Settings**: Server configuration
+- `Switch`: Toggle server view modes
+- `Capture Screen`: Request capture from the selected client
+- `Send Message`: Displays a pop-up on the client
+- `Play Sound`: Plays a sound on the remote machine
+- `Buzz`: Sends a quick notification
+- `Settings`: Server configuration
 
 #### Context Menu
-- **Save Log**: Export the activity log
-- **Clear Log**: Clear the history
-- **Automatic Capture**: Enable/disable periodic captures
-- **Close Client**: Disconnect a specific client
+- `Save Log`: Export the activity log
+- `Clear Log`: Clear the history
+- `Automatic Capture`: Enable/disable periodic captures
+- `Close Client`: Disconnect a specific client
 
 ### LCD Display (Arduino)
 
@@ -191,19 +192,20 @@ Press the physical button to navigate between connected clients.
 ### Client Application
 
 The client app runs in the background:
-- **Tray icon**: Only visible if the active window contains the word K-WAYD in its title
-- **Right click**: Access settings
-- **Auto-reconnect**: Attempts to reconnect if connection is lost
-- **Adaptive capture**: Only sends activity changes
+- `Tray icon`: Only visible if the active window contains the word K-WAYD in its title
+- `Right click`: Access settings
+- `Auto-reconnect`: Attempts to reconnect if connection is lost
+- `Adaptive capture`: Only sends activity changes
 
 ## 🔒 Security Considerations
 
-- **Local network**: Recommended for private, trusted networks only
-- **No encryption**: Communication is not encrypted
-- **Privacy**: The system logs all user activity
+- `Local network`: Recommended for private, trusted networks only
+- `No encryption`: Communication is not encrypted
+- `Privacy`: The system logs all user activity
 
 ---
-**Note**: This software is designed for personal and educational use. Use it responsibly and respect user privacy.
+
+`Note`: This software is designed for personal and `educational` use. Use it responsibly and respect user privacy.
 
 ## 📄 License
 
