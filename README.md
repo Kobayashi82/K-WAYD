@@ -12,7 +12,7 @@
 </div>
 
 <div align="center">
-  <img src="/K-WAYD%20(Arduino)/K-WAYD.jpg">
+  <img src="/K-WAYD.png">
 </div>
 
 # K-WAYD
@@ -216,4 +216,8 @@ Este proyecto está licenciado bajo la WTFPL – [Do What the Fuck You Want to P
 
 *"Know what they're doing, anytime, anywhere"*
 
+</div>
+
+<div align="center">
+  <img src="/K-WAYD%20(Arduino)/K-WAYD.jpg">
 </div>
