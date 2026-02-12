@@ -11,7 +11,7 @@
 </div>
 
 <div align="center">
-  <img src="/K-WAYD.png">
+  <img src="/images/K-WAYD.jpg">
 </div>
 
 # K-WAYD
@@ -222,5 +222,5 @@ This project is licensed under the WTFPL – [Do What the Fuck You Want to Publi
 </div>
 
 <div align="center">
-  <img src="/K-WAYD%20(Arduino)/K-WAYD.jpg">
+  <img src="/K-WAYD/images/K-WAYD_arduino.jpg">
 </div>
