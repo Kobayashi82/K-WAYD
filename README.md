@@ -222,5 +222,5 @@ This project is licensed under the WTFPL – [Do What the Fuck You Want to Publi
 </div>
 
 <div align="center">
-  <img src="/K-WAYD/images/K-WAYD_arduino.jpg">
+  <img src="/images/K-WAYD_arduino.jpg">
 </div>
